@@ -35,8 +35,13 @@ public class LogAnalyzer
     public int numberOfAccesses()
     {
         int total = 0;
-        total = hourCounts[hour]
-        
+        reader.reset();
+        while (reader.hasNext()) {
+        LogEntry entry = reader.next();
+        int hour = entry.getHour();
+        total = hourCounts[hour] + 1;
+        total++;
+        }
         return total;
     }
     
