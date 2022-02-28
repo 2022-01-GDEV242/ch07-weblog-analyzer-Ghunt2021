@@ -23,6 +23,23 @@ public class LogAnalyzer
         reader = new LogfileReader("demo.log");
     }
 
+    public LogAnalyzer(String fileName)
+    {
+    hourCounts = new int[24];
+    reader = new LogfileReader(fileName);
+    }
+    
+     /**
+     * Return the number of accesses recorded in the log file
+     */
+    public int numberOfAccesses()
+    {
+        int total = 0;
+        total = hourCounts[hour]
+        
+        return total;
+    }
+    
     /**
      * Analyze the hourly access data from the log file.
      */
